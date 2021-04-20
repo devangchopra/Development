@@ -1,0 +1,13 @@
+#ulTasks li.done {
+    color: #6c757d;
+    text-decoration: line-through;
+  }
+/*
+Adding our own styles other than boostrap ex:linethrough (when the task is clicked in ul)
+*/
+
+/*
+you could also use strike through method
+
+diabled item have a different colour in boostrap
+*/
