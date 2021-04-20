@@ -1,0 +1,16 @@
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+ #p {
+        background-color: cyan;
+ }
+
+.hey{
+     font-size:large;
+     font-family:cursive;
+}
