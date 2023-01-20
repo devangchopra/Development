@@ -1,0 +1,30 @@
+Whenever we update our code....we need to restart our
+server...to solve this issue we use a package named
+as nodemon.
+
+It monitors our project
+As soon as updations come
+it restarts automatically
+
+To install it
+TERMINAL
+npm install -g nodemon
+
+-g stands for gloabal
+Globally in that package / directory we are installing it
+
+
+Once you install the nodemon
+To run the server you need not to write node index.js
+Now write nodemon NAME OF FILE
+
+Now the moment you save the unchanged code...nodemon
+will start automatically
+
+
+
+Whenever i am running the server...it reads through
+the whole file , compiles and loads all the functions
+to the memory and calls them when required.
+When it loads all fxns...it doesnot loads the data of 
+HTML file...it will get rendered at time of opening in the browser
