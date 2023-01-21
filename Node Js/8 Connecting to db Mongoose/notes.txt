@@ -1,0 +1,46 @@
+1. Till now what was happening that our data was in RAM
+Changes reflected in RAM and as soon as we restart our server
+Changes are gone....we don't want that.
+
+2. Soltution : Databases
+3. We will use NoSQL Database : MongoDB
+4. Storage in form of JSON objects
+
+5. Our server will interact with Database server.
+6. MongoDB is very widely used with NodeJs.
+7. It is open source.
+
+8. Why MongoDB ?
+- Ease of use ... you don't need to define any structure
+- Two important things : MEAN and MEARN
+- MEAN : MongoDB , Express , Angular , NodeJs
+- MERN : MongoDB , Express , React , NodeJs
+- Angular and React are Frontend frameworks on JS
+- These two are more popular development stack
+
+
+9. Terminologies related to MongoDB
+- Fields : The keys in the JSON file.
+- Document : A particular object in the list.
+- Collection : The list is known as Collection.
+- Database : Set of Collection.
+
+10. You don't need to learn the core language of that particular tech.
+For ex : to access data in MongoDB you need to learn its language.
+But the thing is people have created a layer over Express which is 
+known as ODM and you need to interact with that ODM.
+ODM = Object Document Mapper
+Wrapper written over MongoDB
+
+11. Similarly comparing it with Tabular Databases , they have ORM
+Object Relational Mapper.
+
+12. Under NoSQL : MongoDB is Document Database
+
+13. Steps we will follow
+- Install MongoDB and Check.
+- Install Robo 3T : GUI which helps to visualize data
+- Installing Mongoose from NPM
+- Setting up configuration
+- Running server amd testing
+
