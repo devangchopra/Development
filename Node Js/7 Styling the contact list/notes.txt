@@ -1,0 +1,59 @@
+1. Styling our contact list
+2. app.use(express.static("assets"));
+//Use : Middleware
+//Express.static : Inbuilt fnx
+//Assests : Folder Name
+
+
+3. In assets create subfolders : css , images , js
+4. Inside css : home.css , Inside js : home.js
+
+5. Rest code same as previous
+6. Now to add css to HTML : home.ejs : below title
+7. Js should be added below the body : why so : 
+8. Because we need that HTML page loads first and then the script runs
+9. Code :  <script type ="text/javascript" src ="js/home.js"></script>
+10. Run and check
+
+11. Styling the css
+12. Including design library fontawesome
+13. When you click on free in fontawesome...it will give you a style
+    link from CDN : Content Delivery Network
+14. Someone else is hosting CSS file for us 
+16. Our css should be below every css so that i can override it
+
+17. to use fontawesome
+<i class="fas fa-___(icon class name)"</i>
+<i class="fas fa-address-book"></i>
+To see all icons : go to fontawesome cheatsheet on internet
+
+
+18. 
+Revision :
+* index.js
+* npm init
+* npm install express
+* npm install nodemon
+* started our server : required express , choose port , listen , get 
+  sending data from server to HTML : views , ejs : similar to js : HTML remains same
+* npm install ejs
+* Telling express to use ejs as view engine and specify its path
+* Js with exception tags <%%> and for print <%=%>
+* app.get("/",function(req,res)) : / == Route , funtion = controller
+* We passed the data to HTML as context
+* When route is encoutered....controller is called....
+* render : will go to views and find the file to render
+* and will pass the data to res.local
+* local is gloabal key so we can use it
+* Setting Middleware to read our request from form
+* data from form goes to /create-contact route
+* There we added data 
+* Static files  : app.use(express.static(assets))
+
+
+
+
+ 
+
+
+

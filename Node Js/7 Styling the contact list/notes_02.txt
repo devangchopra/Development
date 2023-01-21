@@ -1,0 +1,97 @@
+1. To delete a contact
+2. Firstly we will add a delete button while looping the contact list
+3.
+<% for(let i of contact_list){%>
+ <li>
+    <span id="c-name"><%= i.name %></span>
+    <span id="c-name"><%= i.phone %></span>
+
+    <!--To delete a contact-->
+    <div class="delete-button">
+        <a>
+                                    
+        </a>
+    </div>
+    </li>
+<%} %>
+
+4. We did <a> because it will take us to controller wherein it will find a contact and delete it
+
+5. Make a controller for delete
+6. For deleting from array we will use splice
+
+
+7. Param : String And Query
+8. If we are using string param or param
+i.e /delete-contact/10 
+we need to tell controller the type of data
+app.get("/delete-contact/:phone", function(req,res){
+    let phone_to_be_deleted = req.params.phone;
+});
+
+9.In my HTML file i do this
+<div class="delete-button">
+    <a href="/delete-contact/<%= i.phone%>">
+        //Accessing the phone and passing it to controller
+        <i class="fas fa-window-close"></i>
+    </a>
+</div>
+
+
+10. Query Param 
+app.get("/delete-contact", function(req,res){
+    console.log(req.query);
+    let phone_to_be_deleted = req.query.phone;
+});
+
+And in HTML file also : 
+<div class="delete-button">
+    <!--For query-->
+    <a href="/delete-contact/?phone = <%= i.phone %>"></a>
+        <i class="fas fa-window-close"></i>
+    </a>
+</div>
+
+This is same as form sending data to server
+so to process it here also we need a middleware
+
+11. When using query...you can see the same thing in the URL tab of browser
+Like this
+http://localhost:8000/delete-contact/?phone=70091551331
+
+12. I will append the name also ... because i can chain using Query Param
+
+13. To append in HTML
+<a href="/delete-contact/?phone=<%= i.phone %>&name=<%= i.name%>">
+
+14.Now if you kill the server and check the URL you would see that
+if the name has space it would appear as %20%.... because
+the string having spaces has undergone URL friendly conversion
+URL can't contain spcaes so it does this
+
+Like this
+http://localhost:8000/delete-contact/?phone=8521364790&name=Hello%20World
+
+
+To kill the server , after you press the delete button
+press ctrl+c in your terminal
+
+15. But we will limit to phone only
+
+16. We will iterate over the contact list...find the index 
+of the phone number and then we will delete it...if found
+
+app.get("/delete-contact", function(req,res){   
+    let phone_to_be_deleted = req.query.phone;
+
+    let contactIndex = contactList.findIndex(contact => contact.phone == phone_to_be_deleted);
+    //Inbulit fxn : find index
+    //contact will point to each object in list one by one
+    //== bcoz we arent going for strict checking
+    if(contactIndex != -1){
+        contactList.splice(contactIndex,1);
+        //Basically moving "1" to left
+    }
+    return res.redirect("back");
+});
+
