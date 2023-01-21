@@ -1,0 +1,39 @@
+<!--Creating the HTML form-->
+
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <h1>Contacts List</h1>
+
+        <div>
+            <ul>
+                <!--The naming should be same as context-->
+                <% for(let i of locals.contact_list){ %> 
+                    <li>
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+        <!--Form-->
+        <!--Action signifies where do you wanna send the data-->
+        <!--POST : sending data-->
+        <form action="/create-contact" method ="POST">
+            <input type ="text" name="name" placeholder="Enter Name" required>
+            <input type ="number" name="phone" placeholder="Enter Phone" required>
+            <button type = "submit">Add Contact</button>
+        </form>
+
+        <!--Name : key for the JSON data which will come-->
+        <!--Reqquired means you need to add -->
+        <!--Action : URL : same as the controller which is working
+        over it-->
+
+    </body>
+</html>

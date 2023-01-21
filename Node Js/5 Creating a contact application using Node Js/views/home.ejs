@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+    </head>
+    <body>
+        <h1>Contacts List</h1>
+
+        <div>
+            <ul>
+                <!--The naming should be same as context-->
+                <% for(let i of locals.contact_list){ %> 
+                    <li>
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+    </body>
+</html>
